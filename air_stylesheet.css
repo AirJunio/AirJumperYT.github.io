@@ -1,0 +1,76 @@
+body {
+	background-image: linear-gradient(180deg, hsl(2,67%,50%) 0%,  hsl(12,72%,42%) 20%, hsl(2,37%,22%)100%, hsl(0,0%,10%)80%, hsl(0,0%,5%)100% );
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#warm_filter {
+	margin: 0px;
+	background-color: hsla(30,100%,50%,0.05);
+	box-shadow: 0px 0px 20px hsla(30,100%,50%,0.15);
+}
+
+#content {
+	color: hsl(30,5%,95%);
+	font-family: Bahnschrift, Tahoma, Arial, sans-serif;
+	text-align: center;
+	font-size: 2em;
+	width: 50%;
+	margin: auto;
+}
+
+#info {
+	font-size: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	color: hsla(5,60%,60%,0.8);
+	font-weight: bold;
+}
+
+img[alt] {
+	color: white;
+	font-family: Impact, Bahnschrift, Tahoma, Arial, sans-serif;
+	text-align: center;
+	font-size: 2em;
+}
+
+#airlogo_text {
+	height: 2em;
+	padding: 13px 50px 30px 50px;
+	border-bottom: solid 3px white;
+}
+
+iframe {
+	width: 100%;
+	margin: auto;
+	margin-top: 0.5em;
+	height: 13.97em;
+	border: none;
+	box-shadow: 0px 10px 50px hsla(0,0%,0%,0.5);
+}
+
+@media only screen and (max-width: 1600px) {
+	#content {width: 65%;}
+	iframe {height: 15em;}
+}
+
+@media only screen and (max-width: 1300px) {
+	#content {width: 75%;}
+	iframe {height: 14em;}
+}
+
+@media only screen and (max-width: 996px) {
+	#content {width: 80%;}
+	iframe {height: 13em;}
+}
+
+@media only screen and (max-width: 600px) {
+	#content {width: 95%;}
+	iframe {height: 9em;}
+}
