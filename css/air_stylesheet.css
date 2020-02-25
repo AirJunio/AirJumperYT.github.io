@@ -2,6 +2,16 @@ body {
 	background-image: linear-gradient(180deg, hsl(2,67%,50%) 0%,  hsl(12,72%,42%) 20%, hsl(2,37%,22%)100%, hsl(0,0%,10%)80%, hsl(0,0%,5%)100% );
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	position: relative;
+	border-bottom: solid 5px white;
+}
+
+body * ::selection{
+	color: hsla(0,0%,100%,0.5);
+}
+
+#content > div {
+	margin-bottom: 3em;
 }
 
 #warm_filter {
@@ -27,10 +37,38 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-a {
+#long_text {
+	font-size: 1em;
+}
+
+h1 {
+	border-bottom: solid 3px white;
+	padding: 1em 0.5em;
+}
+
+#title {
+	margin: auto;
+	font-size: 1em;
+	border-top: double 10px white;
+	display: block;
+	width: 6em;
+	padding: 0.2em;
+}
+
+#content a {
 	text-decoration: none;
 	color: hsla(5,60%,60%,0.8);
 	font-weight: bold;
+}
+
+a[name] {
+	padding-top: 2em;
+}
+
+audio {
+	padding: 0.2em;
+	display: inline-block;
+	margin-bottom: 2em;
 }
 
 img[alt] {
@@ -44,6 +82,60 @@ img[alt] {
 	height: 2em;
 	padding: 13px 50px 30px 50px;
 	border-bottom: solid 3px white;
+	margin-top: 20px;
+}
+
+#sticky {
+	top: 0;
+	position: -webkit-sticky;
+	position: sticky;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul * {
+	font-family: Bahnschrift, Tahoma, Arial, sans-serif;
+	font-size: 1.5vw;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+}
+
+ul li {
+	float: left;
+	width: 20%;
+	overflow: visible;
+	box-sizing: border-box;
+	position: relative;
+	padding: 5px 0px;
+	background-color: hsla(0,0%,20%,0.3);
+	border-radius: 10px 50px;
+}
+
+ul li ul {
+	display: none;
+	margin: 0px;
+	border-radius: 10px 50px;
+}
+
+ul li:hover ul {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	width: 100%;
+}
+
+ul li:hover ul *{
+	font-size: 0.9em;
+	width: 100%;
+	padding: 0.5vw 0px;
+	border-radius: 0px;
+	background-color: hsla(0,0%,100%,0.3);
 }
 
 iframe {
@@ -71,6 +163,9 @@ iframe {
 }
 
 @media only screen and (max-width: 600px) {
-	#content {width: 95%;}
+	#content {width: 95%; font-size: 1.5em;}
 	iframe {height: 9em;}
+	ul * {font-size: 2vw;}
+	ul li:hover ul * {font-size: 1.8vw;}
+	ul li ul {border-radius: 10px 20px;}
 }
