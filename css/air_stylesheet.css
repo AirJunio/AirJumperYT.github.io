@@ -6,7 +6,7 @@ body {
 	border-bottom: solid 5px white;
 }
 
-body * ::selection{
+::selection{
 	color: hsla(0,0%,100%,0.5);
 }
 
