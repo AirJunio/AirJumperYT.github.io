@@ -29,6 +29,15 @@ body {
 	margin: auto;
 }
 
+#bg_video {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+
 #info {
 	font-size: 1.3em;
 }
