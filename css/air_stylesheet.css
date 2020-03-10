@@ -175,5 +175,5 @@ iframe {
 	ul * {font-size: 2vw;}
 	ul li:hover ul * {font-size: 1.8vw;}
 	ul li ul {border-radius: 10px 20px;}
-	body {background-size: fixed;}
+	body {background-size: 400%;}
 }
