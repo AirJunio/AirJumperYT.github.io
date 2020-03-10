@@ -31,7 +31,7 @@ body {
 	margin: auto;
 }
 
-#bg_video {
+/*#bg_video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -39,7 +39,7 @@ body {
   min-height: 100%;
   z-index: -1;
   opacity: 90%;
-}
+}*/
 
 #info {
 	font-size: 1.3em;
