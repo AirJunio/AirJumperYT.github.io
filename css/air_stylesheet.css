@@ -14,11 +14,13 @@ body {
 	margin-bottom: 3em;
 }
 
-#warm_filter {
+/*#warm_filter {
+	min-height: 100%;
+	min-width: 100%;
 	margin: 0px;
 	background-color: hsla(30,100%,50%,0.05);
 	box-shadow: 0px 0px 20px hsla(30,100%,50%,0.15);
-}
+}*/
 
 #content {
 	color: hsl(30,5%,95%);
@@ -31,11 +33,12 @@ body {
 
 #bg_video {
   position: fixed;
-  left: 0;
+  right: 0;
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
   z-index: -1;
+  opacity: 90%;
 }
 
 #info {
