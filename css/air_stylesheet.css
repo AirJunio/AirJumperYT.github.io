@@ -1,5 +1,8 @@
 body {
-	background-image: linear-gradient(180deg, hsl(2,7%,30%) 0%,  hsl(12,2%,42%) 20%, hsl(2,17%,22%)100%, hsl(0,0%,10%)80%, hsl(0,0%,5%)100% );
+	background-color: #922;
+	background-image: linear-gradient(180deg, hsl(2,77%,50%) 0%,  hsl(7,82%,42%) 20%, hsl(2,87%,22%)100%, hsl(0,0%,10%)80%, hsl(0,0%,5%)100% );
+	background-image: url("../img/bg_img.gif");
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	position: relative;
@@ -12,14 +15,6 @@ body {
 
 #content > div {
 	margin-bottom: 3em;
-}
-
-#warm_filter {
-	min-height: 100%;
-	min-width: 100%;
-	margin: 0px;
-	background-color: hsla(0,0%,10%,0);
-	box-shadow: 0px 0px 20px hsla(0,0%,10%,0);
 }
 
 #content {
