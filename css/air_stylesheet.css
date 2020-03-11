@@ -165,7 +165,7 @@ iframe {
 }
 
 @media only screen and (max-width: 996px) {
-	body {background-size: 1000px 1000px;}
+	body {background-size: 1000px 1080px;}
 	#content {width: 80%;}
 	iframe {height: 13em;}
 }
