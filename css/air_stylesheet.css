@@ -177,3 +177,15 @@ iframe {
 	ul li:hover ul * {font-size: 1.8vw;}
 	ul li ul {border-radius: 10px 20px;}
 }
+
+@media only screen and (max-height: 996px) {
+	body {background-size: 1000px 996px;}
+}
+
+@media only screen and (max-height: 800px) {
+	body {background-size: 1000px 800px;}
+}
+
+@media only screen and (max-height: 600px) {
+	body {background-size: 1000px 600px;}
+}
