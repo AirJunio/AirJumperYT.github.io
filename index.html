@@ -30,15 +30,29 @@
 				<a name="home"><div id="home"></a>
 					<a href="https://www.youtube.com/channel/UCvX_mZjnBVdbg3RQsKz96sQ?view_as=subscriber" target="_blank"><img src="img/airlogo_text.png" alt="AirJumper" id="airlogo_text"></a>
 					<h1>WELCOME ON MY CHANNEL WEBSITE!</h1>
-					<p id="info">Work in progress, please be patient.</p>
 					<h5>I also recommend checking out:
 					<a href="https://sebson.tk/" target="_blank">sebson.tk</a>, 
 					<a href="https://cezario.tk/" target="_blank">cezario.tk</a>, 
 					<a href="https://kamiltrojan.tk/" target="_blank">kamiltrojan.tk</a>, 
 					<a href="https://ktorajestgodzina.tk/" target="_blank">ktorajestgodzina.tk</a>, 
 					<a href="https://boyfromzaun.tk/" target="_blank">boyfromzaun.tk</a>, 
-					<a href="https://kos4.tk" target="_blank">kos4.tk</a>.
+					<a href="https://kos4.tk" target="_blank">kos4.tk</a>.</h5>
 					<br>
+					<h1>MY BRAND NEW MUSIC PLAYER!</h1>
+					<h4>This is the first version of the music player. Try it out!</h4>
+					<div id="player">
+						<div id="songTitle"></div>
+						<div id="songAuthor">AirJumper's Music Player</div>
+						<div id="play_controls">
+							<button id="back_button" onclick="pre()"> << </button>
+							<button id="play_button" onclick="playOrPauseSong()"> |></button>
+							<button id="next_button" onclick="next()"> >></button>
+						</div>
+						<div id="seek-bar">
+							<div id="fill"></div>
+							<div id="handle"></div>
+						</div>
+					</div>
 					<h4>PLAY LAST VIDEO:</h4>
 					<h2>DISTORTION</h2>
 					<iframe src="https://www.youtube.com/embed/N1tNI3ezFCw?controls=0">
@@ -79,4 +93,96 @@
 				</div>
 			</div>
 	</body>
+		<script type="text/javascript">
+			var songs = ["music/aerial.mp3","music/distortion.mp3","music/fragile.mp3","music/natural_phenomena.mp3","music/stay_here.mp3","music/wide_road.mp3"];
+			
+			var songTitle = document.getElementById("songTitle");
+			var fillbar = document.getElementById("fill");
+			
+			var song = new Audio();
+			var currentSong = 0;
+			
+			function playSong(){
+			song.src = songs[currentSong];
+			songTitle.textContent = songs[currentSong];
+			song.play();
+			startCount();
+			if(currentSong == 0){
+				document.getElementById("songTitle").innerHTML = "AERIAL";
+				}
+			if(currentSong == 1){
+				document.getElementById("songTitle").innerHTML = "DISTORTION";
+				}
+			if(currentSong == 2){
+				document.getElementById("songTitle").innerHTML = "FRAGILE";
+				}
+			if(currentSong == 3){
+				document.getElementById("songTitle").innerHTML = "NATURAL PHENOMENA";
+				}
+			if(currentSong == 4){
+				document.getElementById("songTitle").innerHTML = "STAY HERE";
+				}
+			if(currentSong == 5){
+				document.getElementById("songTitle").innerHTML = "WIDE ROAD";
+				}
+			}
+			
+			function playOrPauseSong(){
+				if(song.paused){
+					song.play();
+					document.getElementById("play_button").innerHTML = "||";
+				}
+				else{
+					song.pause();
+					document.getElementById("play_button").innerHTML = "|>";
+				}
+			}
+			
+			song.addEventListener('timeupdate',function(){
+				var position = song.currentTime / song.duration;
+				fillbar.style.width = position * 100 + '%';
+			});
+			
+			function next(){
+				currentSong++;
+				if(currentSong > 5){
+					currentSong = 0;
+				}
+				playSong();
+				document.getElementById("play_button").innerHTML = "||";
+			}
+			
+			function pre(){
+				currentSong--;
+				if(currentSong < 0){
+					currentSong = 5;
+				}
+				playSong();
+				document.getElementById("play_button").innerHTML = "||";
+			}
+			
+			function autoplay(){
+				if(song.currentTime / song.duration == 1){
+					next();
+				}
+			}
+			
+			window.onload = playSong;
+			
+			var timer;
+			var timer_is_on = 0;
+
+			function timedCount() {
+				t = setTimeout(timedCount, 500);
+				autoplay();
+			}
+
+			function startCount() {
+				if (!timer_is_on) {
+				timer_is_on = 1;
+				timedCount();
+			  }
+			}
+			
+		</script>
 </html>

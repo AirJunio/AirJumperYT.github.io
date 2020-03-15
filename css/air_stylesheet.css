@@ -1,6 +1,6 @@
 body {
 	background-color: white;
-	background-image: linear-gradient(180deg, hsl(2,77%,50%) 0%,  hsl(7,82%,42%) 20%, hsl(2,87%,22%)100%, hsl(0,0%,10%)80%, hsl(0,0%,5%)100% );
+	background-image: linear-gradient(180deg, hsl(2,77%,50%) 0%,  hsl(7,82%,42%) 20%, hsl(2,87%,22%)100%);
 	/*background-image: url("../img/bg_img.gif");*/
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -177,3 +177,94 @@ iframe {
 	ul li:hover ul * {font-size: 1.8vw;}
 	ul li ul {border-radius: 10px 20px;}
 }
+
+/*player*/
+
+				#player {
+					width: 13em;
+					box-shadow: 0 0 2em #333a;
+					background-color: #282828;
+					padding: 1em;
+					margin: 2em auto;
+					border-radius: 1em 3.5em;
+					border-bottom: solid 0.3em rgb(130,120,120);
+					overflow: hidden;
+				}
+				
+				#songTitle {
+					font-family: Bahnschrift, Arial, sans-serif;
+					text-transform: uppercase;
+					padding-bottom: 0.2em;
+					color: hsl(2,67%,50%);
+					font-size: 1.2em;
+					font-weight: bold;
+					border-bottom: solid 0.15em hsl(2,77%,50%);
+					margin-bottom: 0.3em;
+					text-align: center;
+					border-radius: 50%;
+					text-shadow: 0 0 0.8em hsla(2,77%,60%,0.3);
+				}
+				
+				#songAuthor {
+					font-size: 0.7em;
+					text-align: center;
+					color: hsla(2,77%,50%,0.7);
+					margin-bottom: 0.3em;
+				}
+				
+				#play_controls {
+					width: 8em;
+					height: 2.5em;
+					margin: auto;
+					background-color: transparent;
+				}
+				
+				#play_button, #back_button, #next_button {
+					background-color: rgb(130,120,120);
+					width: 2em;
+					height: 2em;
+					border-radius: 50%;
+					margin: auto;
+					text-align: center;
+					font-family: Bahnschrift, Arial, sans-serif;
+					font-weight: bold;
+					color: hsl(2,77%,50%);
+					text-shadow: 0 0 0.5em hsla(2,7%,70%,0.5);
+					font-size: 1em;
+					padding-left: 0.28em;
+					transform: translate(0,0.5em)
+				}
+				
+				#play_button {
+					letter-spacing: 0.1em;
+				}
+				
+				#back_button, #next_button {
+					letter-spacing: 0;
+					width: 1.8em;
+					height: 1.8em;
+				}
+				
+				#seek-bar {
+					width: 7em;
+					height: 0.2em;
+					background-color: rgb(130,120,120);
+					display: flex;
+					margin: 1em auto 0;
+					border-radius: 0.1em;
+				}
+				
+				#fill {
+					height: 0.2em;
+					border-radius: 0.1em;
+					background-color: hsl(2,77%,50%);
+				}
+				
+				#handle {
+					width: 0.2em;
+					height: 0.2em;
+					background-color: hsl(2,77%,50%);
+					border-radius: 50%;
+					margin-left: -0.1em;
+					transform: scale(2);
+				}
