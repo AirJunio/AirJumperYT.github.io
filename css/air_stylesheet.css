@@ -178,6 +178,8 @@ iframe {
 	ul li ul {border-radius: 10px 20px;}
 }
 
+	/* player */
+
 				#player {
 					width: 13em;
 					box-shadow: 0 0 2em #333a;
@@ -187,6 +189,7 @@ iframe {
 					border-radius: 1em 3.5em;
 					border-bottom: solid 0.3em rgb(130,120,120);
 					overflow: hidden;
+					font-size: 0.87em;
 				}
 				
 				#songTitle {
