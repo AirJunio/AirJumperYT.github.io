@@ -187,7 +187,7 @@ iframe {
 					padding: 1em;
 					margin: 2em auto;
 					border-radius: 1em 3.5em;
-					border-bottom: solid 0.3em rgb(130,120,120);
+					border-bottom: solid 0.3em rgb(13,12,12);
 					overflow: hidden;
 					font-size: 0.87em;
 				}
@@ -197,7 +197,7 @@ iframe {
 					text-transform: uppercase;
 					padding-bottom: 0.2em;
 					color: hsl(2,67%,50%);
-					font-size: 1.2em;
+					font-size: 0.9em;
 					font-weight: bold;
 					border-bottom: solid 0.15em hsl(2,77%,50%);
 					margin-bottom: 0.3em;
@@ -221,10 +221,11 @@ iframe {
 				}
 				
 				#play_button, #back_button, #next_button {
-					background-color: rgb(130,120,120);
+					background-color: rgb(13,12,12);
 					width: 2em;
 					height: 2em;
 					border-radius: 50%;
+					border: solid 0.06em rgb(130,120,120);
 					margin: auto;
 					text-align: center;
 					font-family: Bahnschrift, Arial, sans-serif;
@@ -249,7 +250,7 @@ iframe {
 				#seek-bar {
 					width: 7em;
 					height: 0.2em;
-					background-color: rgb(130,120,120);
+					background-color: rgb(13,12,12);
 					display: flex;
 					margin: 1em auto 0;
 					border-radius: 0.1em;
