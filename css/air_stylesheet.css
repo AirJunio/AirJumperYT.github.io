@@ -285,7 +285,23 @@ iframe {
 					cursor: pointer;
 				}
 				
+				#slider::-webkit-slider-thumb {
+					-webkit-appearance: none;
+					appearance: none;
+					width: 0px;
+					height: 0px;
+					background: transparent;
+					border-radius: 50%;
+					cursor: pointer;
+				}
 
+				#slider::-moz-range-thumb {
+					width: 0px;
+					height: 0px;
+					background: transparent;
+					cursor: pointer;
+				}
+				
 				#slider-bar {
 					margin: auto;
 					width: 7em;
