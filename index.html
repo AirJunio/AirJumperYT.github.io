@@ -131,10 +131,14 @@
 				if(song.paused){
 					song.play();
 					document.getElementById("play_button").innerHTML = "||";
+					document.getElementById("play_button").style.letterSpacing = "0.2em";
+
 				}
 				else{
 					song.pause();
 					document.getElementById("play_button").innerHTML = "|>";
+					document.getElementById("play_button").style.letterSpacing = "0.1em";
+
 				}
 			}
 			
@@ -150,6 +154,7 @@
 				}
 				playSong();
 				document.getElementById("play_button").innerHTML = "||";
+				document.getElementById("play_button").style.letterSpacing = "0.2em";
 			}
 			
 			function pre(){
@@ -159,6 +164,7 @@
 				}
 				playSong();
 				document.getElementById("play_button").innerHTML = "||";
+				document.getElementById("play_button").style.letterSpacing = "0.2em";
 			}
 			
 			function autoplay(){

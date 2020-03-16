@@ -233,12 +233,16 @@ iframe {
 					color: hsl(2,77%,50%);
 					text-shadow: 0 0 0.5em hsla(2,7%,70%,0.5);
 					font-size: 1em;
-					padding-left: 0.28em;
-					transform: translate(0,0.5em)
+					transform: translate(0,0.5em);
+				}
+				
+				#play_button:active, #back_button:active, #next_button:active {
+					background-color: rgb(32,28,28)
 				}
 				
 				#play_button {
 					letter-spacing: 0.1em;
+					padding-left: 0.45em;
 				}
 				
 				#back_button, #next_button {
