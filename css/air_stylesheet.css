@@ -26,15 +26,24 @@ body {
 	margin: auto;
 }
 
-#bg_img {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  z-index: -1;
-  opacity: 90%;
+#clock {
+	font-size: 0.8em;
+	font-family: Bahnschrift Light, Arial Narrow, sans-serif;
+	color: white;
+	padding: 2em 0 0;
+	text-shadow: 0 0 2em #fff7;
 }
+
+#clock p {
+	margin: 0;
+	display: inline;
+}
+
+#dow {color: #fffa;}
+
+#date {font-weight: bold;}
+
+#watch {color: #444;}
 
 #info {
 	font-size: 1.3em;
@@ -68,8 +77,20 @@ h1 {
 	font-weight: bold;
 }
 
-a[name] {
-	padding-top: 2em;
+#small_info {
+	width: 24em;
+	margin: 0 auto 1em;
+	padding-bottom: 0.3em;
+	font-size: 0.4em;
+	color: #fffc;
+	font-style: italic;
+	border-bottom: dashed 0.2em #fff7;
+	border-radius: 50%;
+}
+
+#small_info a {
+	color: #444c;
+	text-shadow: 0 0 1em #7775;
 }
 
 audio {
