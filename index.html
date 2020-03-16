@@ -92,12 +92,35 @@
 					<p id="title">WIDE ROAD: </p><audio controls>
 					<source src="music/wide_road.mp3" type="audio/mp3">
 					</audio>
+					<p id="title">THE VASTNESS: </p><audio controls>
+					<source src="music/the_vastness.mp3" type="audio/mp3">
+					</audio>
+					<p id="title">BEFORE THE RACE: </p><audio controls>
+					<source src="music/before_the_race.mp3" type="audio/mp3">
+					</audio>
+					<p id="title">LONE RIDER: </p><audio controls>
+					<source src="music/lone_rider.mp3" type="audio/mp3">
+					</audio>
+					<p id="title">NEAR FUTURE: </p><audio controls>
+					<source src="music/near_future.mp3" type="audio/mp3">
+					</audio>
+					<p id="title">SOLAR SYSTEM: </p><audio controls>
+					<source src="music/solar_system.mp3" type="audio/mp3">
+					</audio>
+					<p id="title">THE FALLEN ONE: </p><audio controls>
+					<source src="music/the_fallen_one.mp3" type="audio/mp3">
+					</audio>
+					<p id="title">DESERT BEAT: </p><audio controls>
+					<source src="music/desert_beat.mp3" type="audio/mp3">
+					</audio>
 					<h3><a href="https://www.youtube.com/channel/UCvX_mZjnBVdbg3RQsKz96sQ?view_as=subscriber">Visit my channel for more!</a></h3>
 				</div>
 			</div>
 	</body>
 		<script type="text/javascript">
-			var songs = ["music/aerial.mp3","music/distortion.mp3","music/fragile.mp3","music/natural_phenomena.mp3","music/stay_here.mp3","music/wide_road.mp3"];
+			var songs = ["music/aerial.mp3","music/distortion.mp3","music/fragile.mp3","music/natural_phenomena.mp3","music/stay_here.mp3","music/wide_road.mp3","music/the_vastness.mp3","music/before_the_race.mp3","music/lone_rider.mp3","music/near_future.mp3","music/solar_system.mp3","music/the_fallen_one.mp3","music/desert_beat.mp3"];
+			
+			var songsCount = songs.length;
 			
 			var songTitle = document.getElementById("songTitle");
 			var fillbar = document.getElementById("fill");
@@ -112,22 +135,43 @@
 			startCount();
 			if(currentSong == 0){
 				document.getElementById("songTitle").innerHTML = "AERIAL";
-				}
+			}
 			if(currentSong == 1){
 				document.getElementById("songTitle").innerHTML = "DISTORTION";
-				}
+			}
 			if(currentSong == 2){
 				document.getElementById("songTitle").innerHTML = "FRAGILE";
-				}
+			}
 			if(currentSong == 3){
 				document.getElementById("songTitle").innerHTML = "NATURAL PHENOMENA";
-				}
+			}
 			if(currentSong == 4){
 				document.getElementById("songTitle").innerHTML = "STAY HERE";
-				}
+			}
 			if(currentSong == 5){
 				document.getElementById("songTitle").innerHTML = "WIDE ROAD";
-				}
+			}
+			if(currentSong == 6){
+				document.getElementById("songTitle").innerHTML = "THE VASTNESS";
+			}
+			if(currentSong == 7){
+				document.getElementById("songTitle").innerHTML = "BEFORE THE RACE";
+			}
+			if(currentSong == 8){
+				document.getElementById("songTitle").innerHTML = "LONE RIDER";
+			}
+			if(currentSong == 9){
+				document.getElementById("songTitle").innerHTML = "NEAR FUTURE";
+			}
+			if(currentSong == 10){
+				document.getElementById("songTitle").innerHTML = "SOLAR SYSTEM";
+			}
+			if(currentSong == 11){
+				document.getElementById("songTitle").innerHTML = "THE FALLEN ONE";
+			}
+			if(currentSong == 12){
+				document.getElementById("songTitle").innerHTML = "DESERT BEAT";
+			}
 			}
 			
 			function playOrPauseSong(){
@@ -151,7 +195,7 @@
 			
 			function next(){
 				currentSong++;
-				if(currentSong > 5){
+				if(currentSong > songsCount - 1){
 					currentSong = 0;
 				}
 				playSong();
@@ -162,7 +206,7 @@
 			function pre(){
 				currentSong--;
 				if(currentSong < 0){
-					currentSong = 5;
+					currentSong = songsCount -1 ;
 				}
 				playSong();
 				document.getElementById("play_button").innerHTML = "||";
