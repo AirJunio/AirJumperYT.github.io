@@ -252,7 +252,7 @@ iframe {
 				}
 				
 				#seek-bar {
-					width: 7em;
+					width: 100%;
 					height: 0.2em;
 					background-color: rgb(13,12,12);
 					display: flex;
@@ -273,4 +273,21 @@ iframe {
 					border-radius: 50%;
 					margin-left: -0.1em;
 					transform: scale(2);
+				}
+				
+				#slider {
+					transform: translatey(-450%);
+					background-color: transparent;
+					margin: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0%;
+					cursor: pointer;
+				}
+				
+
+				#slider-bar {
+					margin: auto;
+					width: 7em;
+					height: 0.2em;
 				}

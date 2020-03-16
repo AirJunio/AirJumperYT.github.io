@@ -48,9 +48,12 @@
 							<button id="play_button" onclick="playOrPauseSong()"> |></button>
 							<button id="next_button" onclick="next()"> >></button>
 						</div>
-						<div id="seek-bar">
-							<div id="fill"></div>
-							<div id="handle"></div>
+						<div id="slider-bar">
+							<div id="seek-bar">
+								<div id="fill"></div>
+								<div id="handle"></div>
+							</div>
+							<input oninput="changeDuration(this.value)" onchange="changeDuration(this.value)" type="range" id="slider" name="slider" min="0" max="100" value="0">
 						</div>
 					</div>
 					<h4>PLAY LAST VIDEO:</h4>
@@ -188,6 +191,11 @@
 				timer_is_on = 1;
 				timedCount();
 			  }
+			}
+			
+			function changeDuration(){
+				sliderValue = document.getElementById("slider").value;
+				song.currentTime = sliderValue * song.duration / 100;
 			}
 			
 		</script>
