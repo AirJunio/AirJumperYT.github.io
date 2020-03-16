@@ -137,53 +137,16 @@
 			function playSong(){
 				song.src = songs[currentSong];
 				songTitle.textContent = songs[currentSong];
+				var title = songTitle.textContent.replace(/music\/|.mp3/g,"").replace(/_/g," ");
+				songTitle.innerHTML = title;
 				song.play();
 				startCount();
-				if(currentSong == 0){
-					document.getElementById("songTitle").innerHTML = "AERIAL";
-				}
-				if(currentSong == 1){
-					document.getElementById("songTitle").innerHTML = "DISTORTION";
-				}
-				if(currentSong == 2){
-					document.getElementById("songTitle").innerHTML = "FRAGILE";
-				}
-				if(currentSong == 3){
-					document.getElementById("songTitle").innerHTML = "NATURAL PHENOMENA";
-				}
-				if(currentSong == 4){
-					document.getElementById("songTitle").innerHTML = "STAY HERE";
-				}
-				if(currentSong == 5){
-					document.getElementById("songTitle").innerHTML = "WIDE ROAD";
-				}
-				if(currentSong == 6){
-					document.getElementById("songTitle").innerHTML = "THE VASTNESS";
-				}
-				if(currentSong == 7){
-					document.getElementById("songTitle").innerHTML = "BEFORE THE RACE";
-				}
-				if(currentSong == 8){
-					document.getElementById("songTitle").innerHTML = "LONE RIDER";
-				}
-				if(currentSong == 9){
-					document.getElementById("songTitle").innerHTML = "NEAR FUTURE";
-				}
-				if(currentSong == 10){
-					document.getElementById("songTitle").innerHTML = "SOLAR SYSTEM";
-				}
-				if(currentSong == 11){
-					document.getElementById("songTitle").innerHTML = "THE FALLEN ONE";
-				}
-				if(currentSong == 12){
-					document.getElementById("songTitle").innerHTML = "DESERT BEAT";
-				}
-			watch();
+				watch();
 			}
 			
 			function watch(){
 				var today = new Date();
-				var dow = today.getDay();
+				var dayOfWeek = today.getDay();
 				var  d = today.getDate();
 				var  m = today.getMonth() +1;
 				var  y = today.getFullYear();
@@ -194,16 +157,9 @@
 				m = checkTime(m);
 				min = checkTime(min);
 				s = checkTime(s);
-				if (dow == 1) {dow = "Mon"};
-				if (dow == 2) {dow = "Tues"};
-				if (dow == 3) {dow = "Wed"};
-				if (dow == 4) {dow = "Thu"};
-				if (dow == 5) {dow = "Fri"};
-				if (dow == 6) {dow = "Sat"};
-				if (dow == 7) {dow = "Sun"};
 				
-				/* document.getElementById('clock').innerHTML =
-				dow + "." + " / " + d + "." + m + "." + y + " / " + h + ":" + min + ":" + s; */
+				var days = ["Mon","Tues","Wed","Thu","Fri","Sat","Sun"];
+				dow = days[dayOfWeek -1];
 				
 				document.getElementById("dow").innerHTML = dow;
 				document.getElementById("date").innerHTML = " / " + d + "." + m + "." + y + " / ";
