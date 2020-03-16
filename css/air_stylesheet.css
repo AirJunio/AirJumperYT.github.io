@@ -185,7 +185,7 @@ iframe {
 					box-shadow: 0 0 2em #333a;
 					background-color: #282828;
 					padding: 1em;
-					margin: 2em auto;
+					margin: 2em auto 4em;
 					border-radius: 1em 3.5em;
 					border-bottom: solid 0.3em rgb(13,12,12);
 					overflow: hidden;
