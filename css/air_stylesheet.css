@@ -216,6 +216,7 @@ iframe {
 					text-shadow: 0 0 0.5em hsla(2,7%,70%,0.5);
 					font-size: 1em;
 					transform: translate(0,0.5em);
+					outline: none;
 				}
 				
 				#play_button:active, #back_button:active, #next_button:active {
@@ -258,37 +259,47 @@ iframe {
 				}
 				
 				#slider {
+					display: flex;
 					-webkit-appearance: none;
-					transform: translatey(-450%);
-					background-color: #0000;
-					margin: 0;
+					transform: translatey(-0.7em);
+					background-color: #2828280;
 					width: 100%;
-					height: 100%;
-					opacity: 100%;
+					height: 1em;
+					opacity: 0%;
 					cursor: pointer;
+					outline: none;
 				}
 				
 				#slider::-webkit-slider-thumb {
 					-webkit-appearance: none;
 					appearance: none;
 					width: 0.2em;
-					height: 0.2em;
-					background: transparent;
+					height: 1em;
+					background: #0000;
 					border-radius: 50%;
 					cursor: pointer;
+					outline: none;
 				}
 
 				#slider::-moz-range-thumb {
+					-webkit-appearance: none;
+					appearance: none;
 					width: 1em;
 					height: 1em;
-					background: transparent;
+					background: #000;
 					cursor: pointer;
+					outline: none;
 				}
 				
 				#slider-bar {
+					padding: 0;
+					display: block;
+					border-radius: 0%;
+					transform: translatey(0.5em);
 					margin: auto;
 					width: 7em;
-					height: 0.2em;
+					height: 1em;
+					background-color: #0ff0;
 				}
 				
 #clock {
