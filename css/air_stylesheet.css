@@ -6,7 +6,6 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	position: relative;
-	border-bottom: solid 5px white;
 }
 
 ::selection{
@@ -46,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	border-bottom: solid 3px white;
 	padding: 1em 0.5em;
+	border-radius: 1.5%;
 }
 
 #title {
@@ -110,6 +110,7 @@ img[alt] {
 	padding: 13px 50px 30px 50px;
 	border-bottom: solid 3px white;
 	margin-top: 20px;
+	border-radius: 5%;
 }
 
 #sticky {
