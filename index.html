@@ -62,7 +62,22 @@
 							<input oninput="changeDuration(this.value)" onchange="changeDuration(this.value)" type="range" id="slider" name="slider" min="0" max="100" value="0">
 						</div>
 					</div>
-					<h4>PLAY LAST VIDEO:</h4>
+					<table id="hotkeys">
+					<h3>KEYBOARD SHORTCUTS:</h3>
+						<tr>
+							<td>PLAY/STOP</td>
+							<td>NUMPAD 0</td>
+						</tr>
+						<tr>
+							<td>NEXT</td>
+							<td>ARROW RIGHT</td>
+						</tr>
+						<tr>
+							<td>PREVIOUS</td>
+							<td>ARROW LEFT</td>
+						</tr>
+					</table>
+					<p>PLAY LAST VIDEO:</p>
 					<h2>DISTORTION</h2>
 					<iframe src="https://www.youtube.com/embed/N1tNI3ezFCw?controls=0">
 					</iframe>
@@ -238,17 +253,14 @@
 			}
 			
 			document.onkeyup = function(e) {
-				if (e.which == 32) {
-					alert("Spacebar key was pressed");
-				} else if (e.ctrlKey && e.which == 66) {
-					alert("Ctrl + B shortcut combination was pressed");
-				} else if (e.ctrlKey && e.altKey && e.which == 89) {
-					alert("Ctrl + Alt + Y shortcut combination was pressed");
-				} else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
-					alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
+				if (e.which == 96) {
+					playOrPauseSong();
+				} else if (e.which == 39) {
+					next();
+				} else if (e.which == 37) {
+					pre();
 				}
-			};
-
+			}
 
 		</script>
 </html>

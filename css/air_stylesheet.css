@@ -379,3 +379,34 @@ iframe {
 	color: #444;
 	text-shadow: 0 0 1em #7775;
 }
+
+table {
+	margin: auto;
+	font-size: 0.8em;
+	margin-bottom: 3em;
+	padding-bottom: 2em;
+	border-radius: 10%;
+	border-bottom: dashed 0.2em #fff;
+	border-bottom: dashed 0.2em #fff7;
+}
+
+td {
+	font-family: Bahnschrift, Arial, sans-serif;
+	min-width: 5em;
+	padding: 0.5em 1em;
+}
+
+td:first-child{
+	font-weight: bold;
+}
+
+td:nth-child(2) {
+	display: block;
+	margin-bottom: 0.3em;
+	color: #ddd;
+	font-family: Bahnschrift Light, Arial Narrow, Arial, sans-serif;
+	border: 0.07em solid #ccc;
+	background-color: #aa4540;
+	background-color: #fff3;
+	border-radius: 0.3em;
+}
