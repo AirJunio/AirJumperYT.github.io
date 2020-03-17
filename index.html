@@ -27,13 +27,13 @@
 			</ul>
 		</div>
 			<div id="content">
+				<span id="clock">
+					<span id="dow">WAIT A SEC...</span>
+					<span id="date"></span>
+					<span id="watch"></span>
+				</span>
+				<p id="small_info">powered by <a href="https://ktorajestgodzina.tk/" target="_blank">ktorajestgodzina.tk </a></p>
 				<a name="home"><div id="home"></a>
-					<span id="clock">
-						<span id="dow">WAIT A SEC...</span>
-						<span id="date"></span>
-						<span id="watch"></span>
-					</span>
-					<div id="small_info">powered by <a href="https://ktorajestgodzina.tk/" target="_blank">ktorajestgodzina.tk </a></div>
 					<a href="https://www.youtube.com/channel/UCvX_mZjnBVdbg3RQsKz96sQ?view_as=subscriber" target="_blank"><img src="img/airlogo_text.png" alt="AirJumper" id="airlogo_text"></a>
 					<h1>WELCOME ON MY CHANNEL WEBSITE!</h1>
 					<h5>I also recommend checking out:
@@ -82,43 +82,12 @@
 					<p id="title">FRAGILE: </p><audio controls>
 					<source src="music/fragile.mp3" type="audio/mp3">
 					</audio>
-					<p id="title">DISTORTION: </p><audio controls>
-					<source src="music/distortion.mp3" type="audio/mp3">
-					</audio>
 				</div>
 				<a name="songs"><div id="songs"></a>
 				<h1>SONGS</h1>
 				<p id="info">There are most of my pieces so far.</p>
-					<p id="title">AERIAL: </p><audio controls>
-					<source src="music/aerial.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">STAY HERE: </p><audio controls>
-					<source src="music/stay_here.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">WIDE ROAD: </p><audio controls>
-					<source src="music/wide_road.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">THE VASTNESS: </p><audio controls>
-					<source src="music/the_vastness.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">BEFORE THE RACE: </p><audio controls>
-					<source src="music/before_the_race.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">LONE RIDER: </p><audio controls>
-					<source src="music/lone_rider.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">NEAR FUTURE: </p><audio controls>
-					<source src="music/near_future.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">SOLAR SYSTEM: </p><audio controls>
-					<source src="music/solar_system.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">THE FALLEN ONE: </p><audio controls>
-					<source src="music/the_fallen_one.mp3" type="audio/mp3">
-					</audio>
-					<p id="title">DESERT BEAT: </p><audio controls>
-					<source src="music/desert_beat.mp3" type="audio/mp3">
-					</audio>
+					<button id="more" onclick="audio()">CLICK HERE TO<br> SHOW SONG LIST</button>
+					<div id = "songList"></div>
 					<h3><a href="https://www.youtube.com/channel/UCvX_mZjnBVdbg3RQsKz96sQ?view_as=subscriber">Visit my channel for more!</a></h3>
 				</div>
 			</div>
@@ -239,5 +208,47 @@
 				sliderValue = document.getElementById("slider").value;
 				song.currentTime = sliderValue * song.duration / 100;
 			}
+			
+			var songNumber = 0;
+			var songNumber2 = 0;
+			
+			function audio() {
+			
+				document.getElementById("more").innerHTML = "HERE YOU ARE!";
+				
+				var loop;
+				for (loop = 0; loop < songs.length; loop++) {
+				
+				var cp = document.createElement("p");
+				var ca = document.createElement("audio");
+				audio.controls = "controls";
+				var casrc = document.createElement("source");
+				var catitle = document.createTextNode(songs[songNumber++].replace(/music\/|.mp3/g,"").replace(/_/g," ") );
+				cp.appendChild(catitle);
+				cp.id = "title";
+				casrc.src = songs[songNumber2++];
+				casrc.type = "audio/mp3";
+				var songList = document.getElementById("songList");
+				
+				songList.appendChild(cp);
+				ca.setAttribute("controls", "controls");
+				ca.appendChild(casrc);
+				songList.appendChild(ca);
+				}
+			}
+			
+			document.onkeyup = function(e) {
+				if (e.which == 32) {
+					alert("Spacebar key was pressed");
+				} else if (e.ctrlKey && e.which == 66) {
+					alert("Ctrl + B shortcut combination was pressed");
+				} else if (e.ctrlKey && e.altKey && e.which == 89) {
+					alert("Ctrl + Alt + Y shortcut combination was pressed");
+				} else if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
+					alert("Ctrl + Alt + Shift + U shortcut combination was pressed");
+				}
+			};
+
+
 		</script>
 </html>

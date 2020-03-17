@@ -26,6 +26,15 @@ body {
 	margin: auto;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: initial;
+	text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
@@ -42,13 +51,42 @@ h1 {
 #title {
 	margin: auto;
 	font-size: 1em;
+	border-radius: 15%;
 	border-top: double 10px white;
 	display: block;
-	width: 6em;
-	padding: 0.2em;
+	width: 8em;
+	padding: 0.5em 0.2em 0.2em;
+	text-transform: uppercase;
 }
 
-#content a {
+#more {
+	background-color: transparent;
+	font-family: Bahnschrift, Arial, Arial Narrow, sans-serif;
+	margin: 1em auto 3em;
+	width: 15em;
+	border: none;
+	outline: none;
+	font-size: 0.5em;
+	color: #fff;
+	color: #fffc;
+	font-style: italic;
+	border-bottom: dashed 0.2em #fff;
+	border-bottom: dashed 0.2em #fff7;
+	border-radius: 50%;
+	padding: 0.5em;
+	transition: border-bottom 0.3s, margin 0.3s;
+	transform: rotatex(10deg);
+	cursor: pointer;
+}
+
+#more:active {
+	margin-top: 1.3em;
+	margin-bottom: 2.8em;
+	text-shadow: none;
+	border-bottom-width: 0.1em;
+}
+
+#content > div a {
 	text-decoration: none;
 	color: hsla(5,60%,60%,0.8);
 	font-weight: bold;
@@ -332,11 +370,12 @@ iframe {
 	font-size: 0.4em;
 	color: #fffc;
 	font-style: italic;
+	border-bottom: dashed 0.2em #fff;
 	border-bottom: dashed 0.2em #fff7;
 	border-radius: 50%;
 }
 
 #small_info a {
-	color: #444c;
+	color: #444;
 	text-shadow: 0 0 1em #7775;
 }
