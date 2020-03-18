@@ -62,21 +62,25 @@
 							<input oninput="changeDuration(this.value)" onchange="changeDuration(this.value)" type="range" id="slider" name="slider" min="0" max="100" value="0">
 						</div>
 					</div>
-					<table id="hotkeys">
-					<h3>KEYBOARD SHORTCUTS:</h3>
-						<tr>
-							<td>PLAY/STOP</td>
-							<td>NUMPAD 0</td>
-						</tr>
-						<tr>
-							<td>NEXT</td>
-							<td>ARROW RIGHT</td>
-						</tr>
-						<tr>
-							<td>PREVIOUS</td>
-							<td>ARROW LEFT</td>
-						</tr>
-					</table>
+					<div id="shortcuts">
+						<div><table id="hotkeys">
+						<h3>KEYBOARD SHORTCUTS:</h3>
+							<tr><td>PLAY/STOP</td><td>NUMPAD 5</td></tr>
+							<tr><td>NEXT</td><td>NUMPAD 8</td></tr>
+							<tr><td>PREVIOUS</td><td>NUMPAD 2</td></tr>
+							<tr><td>+5 SEC</td><td>NUMPAD 6</td></tr>
+							<tr><td>-5 SEC</td><td>NUMPAD 4</td></tr>
+							<tr><td>SONG RESET</td><td>NUMPAD 0</td></tr>
+						</table></div>
+						<div><table id="numpad">
+						<h3>NUMPAD:</h3>
+							<tr><td>num lock</td><td>/</td><td>*</td><td>-</td></tr>
+							<tr><td>7</td><td>8</td><td>9</td><td id="num2">+</td></tr>
+							<tr id="num456"><td>4</td><td>5</td><td>6</td></tr>
+							<tr><td>1</td><td>2</td><td>3</td><td id="numenter">Enter</td></tr>
+							<tr id="num0"><td>0</td><td>.</td></tr>
+						</table></div>
+					</div>
 					<p>PLAY LAST VIDEO:</p>
 					<h2>DISTORTION</h2>
 					<iframe src="https://www.youtube.com/embed/N1tNI3ezFCw?controls=0">
@@ -252,13 +256,31 @@
 				}
 			}
 			
+			function songPlus(){
+				song.currentTime = song.currentTime + 5;
+			}
+			
+			function songMinus(){
+				song.currentTime = song.currentTime - 5;
+			}
+			
+			function songReset(){
+				song.currentTime = 0;
+			}
+			
 			document.onkeyup = function(e) {
-				if (e.which == 96) {
+				if (e.which == 101) {
 					playOrPauseSong();
-				} else if (e.which == 39) {
+				} else if (e.which == 104) {
 					next();
-				} else if (e.which == 37) {
+				} else if (e.which == 98) {
 					pre();
+				} else if (e.which == 102) {
+					songPlus();
+				} else if (e.which == 100) {
+					songMinus();
+				} else if (e.which == 96) {
+					songReset();
 				}
 			}
 
