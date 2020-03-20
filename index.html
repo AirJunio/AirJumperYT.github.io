@@ -112,7 +112,9 @@
 			</div>
 	</body>
 		<script type="text/javascript">
-			var songs = ["music/aerial.mp3","music/distortion.mp3","music/fragile.mp3","music/natural_phenomena.mp3","music/stay_here.mp3","music/wide_road.mp3","music/the_vastness.mp3","music/before_the_race.mp3","music/lone_rider.mp3","music/near_future.mp3","music/solar_system.mp3","music/the_fallen_one.mp3","music/desert_beat.mp3"];
+			var songs = ["aerial","distortion","fragile","natural phenomena","stay here","wide road","the vastness","before the race","lone rider","near future","solar system","the fallen one","desert beat"];
+			
+			var songs = songs.map(song => 'music/' + song.replace(/ /g, '_') + '.mp3');
 			
 			var songsCount = songs.length;
 			
