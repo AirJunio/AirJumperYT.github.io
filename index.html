@@ -130,8 +130,6 @@
 				var title = songTitle.textContent.replace(/music\/|.mp3/g,"").replace(/_/g," ");
 				songTitle.innerHTML = title;
 				song.play();
-				document.getElementById("play_button").innerHTML = "||";
-				document.getElementById("play_button").style.letterSpacing = "0.2em";
 				startCount();
 				watch();
 			}
