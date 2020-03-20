@@ -112,7 +112,7 @@
 			</div>
 	</body>
 		<script type="text/javascript">
-			var songs = ["aerial","distortion","fragile","natural phenomena","stay here","wide road","the vastness","before the race","lone rider","near future","solar system","the fallen one","desert beat"];
+			var songs = ["aerial","distortion","fragile","natural phenomena","stay here","wide road","the vastness","before the race","lone rider","near future","solar system","the fallen one","desert beat","night riders","ago"];
 			
 			var songs = songs.map(song => 'music/' + song.replace(/ /g, '_') + '.mp3');
 			
@@ -241,21 +241,24 @@
 				var loop;
 				for (loop = 0; loop < songs.length; loop++) {
 				
+				var sdiv = document.createElement("div");
 				var cp = document.createElement("p");
 				var ca = document.createElement("audio");
 				audio.controls = "controls";
 				var casrc = document.createElement("source");
 				var catitle = document.createTextNode(songs[songNumber++].replace(/music\/|.mp3/g,"").replace(/_/g," ") );
 				cp.appendChild(catitle);
+				sdiv.id = "sdiv";
 				cp.id = "title";
 				casrc.src = songs[songNumber2++];
 				casrc.type = "audio/mp3";
 				var songList = document.getElementById("songList");
 				
-				songList.appendChild(cp);
+				songList.appendChild(sdiv);
+				sdiv.appendChild(cp);
 				ca.setAttribute("controls", "controls");
 				ca.appendChild(casrc);
-				songList.appendChild(ca);
+				sdiv.appendChild(ca);
 				}
 			}
 			

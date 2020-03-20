@@ -53,9 +53,18 @@ h1 {
 	border-radius: 15%;
 	border-top: double 10px white;
 	display: block;
-	width: 8em;
+	max-width: 6em;
 	padding: 0.5em 0.2em 0.2em;
 	text-transform: uppercase;
+}
+
+#sdiv {
+	float: left;
+	width: 50%;
+}
+
+#songList {
+	display: inline-block;
 }
 
 #more {
@@ -95,6 +104,7 @@ audio {
 	padding: 0.2em;
 	display: inline-block;
 	margin-bottom: 2em;
+	max-width: 90%;
 }
 
 img[alt] {
