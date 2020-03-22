@@ -149,7 +149,9 @@
 				s = checkTime(s);
 				
 				var days = ["Mon","Tues","Wed","Thu","Fri","Sat","Sun"];
-				dow = days[dayOfWeek -1];
+				
+				dow = days[dayOfWeek];
+				if (dayOfWeek == 0) {dow = days[6] };
 				
 				document.getElementById("dow").innerHTML = dow;
 				document.getElementById("date").innerHTML = " / " + d + "." + m + "." + y + " / ";
