@@ -61,6 +61,8 @@ h1 {
 #sdiv {
 	float: left;
 	width: 50%;
+	height: 7em;
+	box-sizing: border-box;
 }
 
 #songList {

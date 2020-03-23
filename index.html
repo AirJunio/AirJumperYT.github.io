@@ -95,8 +95,8 @@
 				<a name="releases"><div id="releases"></a>
 					<h1>NEW RELEASES</h1>
 					<p id="info">I will be adding my new songs here.</p>
-					<p id="title">NATURAL PHENOMENA: </p><audio controls>
-					<source src="music/natural_phenomena.mp3" type="audio/mp3">
+					<p id="title">METRONOME: </p><audio controls>
+					<source src="music/metronome.mp3" type="audio/mp3">
 					</audio>
 					<p id="title">FRAGILE: </p><audio controls>
 					<source src="music/fragile.mp3" type="audio/mp3">
@@ -112,7 +112,7 @@
 			</div>
 	</body>
 		<script type="text/javascript">
-			var songs = ["aerial","distortion","fragile","natural phenomena","stay here","wide road","the vastness","before the race","lone rider","near future","solar system","the fallen one","desert beat","night riders","ago"];
+			var songs = ["aerial", "metronome", "distortion","fragile","natural phenomena","stay here","wide road","the vastness","before the race","lone rider","near future","solar system","the fallen one","desert beat","night riders", "ago"];
 			
 			var songs = songs.map(song => 'music/' + song.replace(/ /g, '_') + '.mp3');
 			
@@ -150,7 +150,7 @@
 				
 				var days = ["Mon","Tues","Wed","Thu","Fri","Sat","Sun"];
 				
-				dow = days[dayOfWeek];
+				dow = days[dayOfWeek -1];
 				if (dayOfWeek == 0) {dow = days[6] };
 				
 				document.getElementById("dow").innerHTML = dow;
