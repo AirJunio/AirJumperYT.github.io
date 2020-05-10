@@ -1,6 +1,6 @@
 body {
-	background-color: hsl(2,87%,22%);
-	background-image: linear-gradient(180deg, hsl(2,77%,50%) 0%,  hsl(7,82%,42%) 20%, hsl(2,87%,22%)100%);
+	background-color: hsl(352,87%,22%);
+	background-image: linear-gradient(180deg, hsl(352,87%,50%) 0%,  hsl(357,82%,42%) 20%, hsl(352,87%,22%)100%);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -190,12 +190,12 @@ iframe {
 
 				#player {
 					width: 13em;
-					box-shadow: 0 0 2em #333a;
-					background-color: #282828;
+					box-shadow: 0 0 2em #777a;
+					background-color: hsl(30,90%,90%);
 					padding: 1em;   
 					margin: 2em auto 4em;
 					border-radius: 1em 3.5em;
-					border-bottom: solid 0.3em rgb(13,12,12);
+					border-bottom: solid 0.3em rgb(190,190,190);
 					overflow: hidden;
 					font-size: 0.87em;
 				}
@@ -229,7 +229,7 @@ iframe {
 				}
 				
 				#play_button, #back_button, #next_button {
-					background-color: rgb(13,12,12);
+					background-color: rgb(200,200,200);
 					width: 2em;
 					height: 2em;
 					border-radius: 50%;
@@ -246,7 +246,7 @@ iframe {
 				}
 				
 				#play_button:active, #back_button:active, #next_button:active {
-					background-color: rgb(32,28,28)
+					background-color: rgb(190,190,190);
 				}
 				
 				#play_button {
@@ -263,7 +263,7 @@ iframe {
 				#seek-bar {
 					width: 100%;
 					height: 0.2em;
-					background-color: rgb(13,12,12);
+					background-color: rgb(190,190,190);
 					display: flex;
 					margin: 1em auto 0;
 					border-radius: 0.1em;
