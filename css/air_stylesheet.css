@@ -1,6 +1,6 @@
 body {
 	background-color: hsl(352,87%,22%);
-	background-image: linear-gradient(180deg, hsl(352,87%,50%) 0%,  hsl(357,82%,42%) 20%, hsl(352,87%,22%)100%);
+	background-image: linear-gradient(180deg, hsl(356,17%,10%) 0%,  hsl(0,12%,2%) 20%, hsl(2,12%,8%)100%);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -16,7 +16,7 @@ body {
 }
 
 #content {
-	color: hsl(30,5%,95%);
+	color: hsl(30,25%,95%);
 	font-family: Bahnschrift, Tahoma, Arial, sans-serif;
 	text-align: center;
 	font-size: 2em;
@@ -56,6 +56,10 @@ h1 {
 	max-width: 6em;
 	padding: 0.5em 0.2em 0.2em;
 	text-transform: uppercase;
+}
+
+#small_bold {
+	margin: 0 auto;
 }
 
 #sdiv {
@@ -174,24 +178,69 @@ ul li:hover ul *{
 	width: 100%;
 	padding: 0.5vw 0px;
 	border-radius: 0px;
-	background-color: hsla(0,0%,100%,0.3);
+	background-color: hsla(0,0%,100%,0.1);
 }
 
 iframe {
-	width: 100%;
+	width: 832px;
 	margin: auto;
 	margin-top: 0.5em;
-	height: 13.83em;
+	height: 468px;
 	border: none;
 	box-shadow: 0px 10px 50px hsla(0,0%,0%,0.5);
 }
 
-	/* player */
+/* player */
+				#player ::selection{
+					color: hsl(2,30%,55%);
+				}
+
+				.volumecontainer {
+					width: 100%;
+				}
+
+				/* The slider itself */
+				.volume{
+					display: block;
+					margin: auto;
+					-webkit-appearance: none;
+					appearance: none;
+					width: 100%;
+					height: 0;
+					background: transparent;
+					outline: none;
+					opacity: 1;
+					-webkit-transition: .2s;
+					transition: opacity .2s;
+					cursor: pointer;
+				}
+
+				.volume::-webkit-slider-thumb {
+					-webkit-appearance: none;
+					appearance: none;
+					width: 2.5em;
+					height: 1em;
+					background: hsl(2,77%,57%);
+					cursor: pointer;
+					border: none;
+					outline: none;
+					border-radius: 1em 3.5em;
+				}
+
+				.volume::-moz-range-thumb {
+					width: 2.5em;
+					height: 1em;
+					background: hsl(2,77%,57%);
+					cursor: pointer;
+					border: none;
+					outline: none;
+					border-radius: 1em 3.5em;
+				}
 
 				#player {
 					width: 13em;
 					box-shadow: 0 0 2em #777a;
-					background-color: hsl(30,90%,90%);
+					background-color: hsl(30,90%,95%);
 					padding: 1em;   
 					margin: 2em auto 4em;
 					border-radius: 1em 3.5em;
@@ -364,7 +413,7 @@ iframe {
 }
 
 #small_info a {
-	color: #444;
+	color: #c04f33;
 	text-shadow: 0 0 1em #7775;
 }
 
@@ -391,7 +440,7 @@ iframe {
 	color: #ddd;
 	font-family: Bahnschrift Light, Arial, sans-serif;
 	border: 0.07em solid #ccc;
-	background-color: #aa4540;
+	background-color: #333;
 	background-color: #fff3;
 	border-radius: 0.3em;
 }
@@ -413,7 +462,7 @@ iframe {
 	color: #ddd;
 	font-family: Bahnschrift Light, Arial, sans-serif;
 	border: 0.07em solid #ccc;
-	background-color: #aa4540;
+	background-color: #333;
 	background-color: #fff3;
 	border-radius: 0.3em;
 	text-align: center;
@@ -481,19 +530,23 @@ iframe {
 
 @media only screen and (max-width: 1300px) {
 	#content {width: 75%;}
-	iframe {height: 14em;}
+	iframe {width: 752px; height: 423px;}
 }
 
 @media only screen and (max-width: 996px) {
 	body {background-size: 1000px 1080px;}
 	#content {width: 80%;}
-	iframe {height: 13em;}
+	iframe {width: 592px; height: 333px;}
 	#shortcuts div {font-size: 0.7em;}
+}
+
+@media only screen and (max-width: 850px) {
+	iframe {width: 464px; height: 261px;}
 }
 
 @media only screen and (max-width: 600px) {
 	#content {width: 95%; font-size: 1.5em;}
-	iframe {height: 9em;}
+	iframe {width: 400px; height: 225px;}
 	ul * {font-size: 2vw;}
 	ul li:hover ul * {font-size: 1.8vw;}
 	ul li ul {border-radius: 10px 20px;}
@@ -502,9 +555,16 @@ iframe {
 	#songList {width: 100%;}
 }
 
+@media only screen and (max-width: 500px) {
+	iframe {width: 304px; height:  171px;}
+}
+
+@media only screen and (max-width: 370px) {
+	iframe {width: 208px; height:  117px;}
+}
+
 @media only screen and (max-width: 300px) {
 	#content {width: 100%; font-size: 1em;}
-	iframe {height: 9em;}
 	ul * {font-size: 2vw;}
 	ul li:hover ul * {font-size: 1.8vw;}
 	ul li ul {border-radius: 10px 20px;}
