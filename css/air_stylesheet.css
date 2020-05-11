@@ -559,7 +559,7 @@ iframe {
 	iframe {width: 304px; height:  171px;}
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 350px) {
 	iframe {width: 208px; height:  117px;}
 }
 
