@@ -81,13 +81,13 @@
 						<div><table id="numpad">
 						<h3>NUMPAD:</h3>
 							<tr><td>num lock</td><td>/</td><td>*</td><td>-</td></tr>
-							<tr><td>7</td><td onclick=next()>8</td><td>9</td><td id="num2">+</td></tr>
+							<tr><td onclick=volumeDown()>7</td><td onclick=next()>8</td><td onclick=volumeUp()>9</td><td id="num2">+</td></tr>
 							<tr id="num456"><td onclick=songMinus()>4</td><td onclick=playOrPauseSong()>5</td><td onclick=songPlus()>6</td></tr>
 							<tr><td>1</td><td onclick=pre()>2</td><td>3</td><td id="numenter">Enter</td></tr>
 							<tr id="num0"><td onclick=songReset()>0</td><td>.</td></tr>
 						</table></div>
 					</div>
-					<p>PLAY LAST VIDEO:</p>
+					<p>WATCH LAST VIDEO:</p>
 					<h2>Robert Makłowicz - Bu Bu Bu (EDM Remix)</h2>
 					<iframe src="https://www.youtube.com/embed/i0xLVsUQzQc?controls=0">
 					</iframe>
@@ -146,10 +146,11 @@
 				songTitle.textContent = songs[currentSong];
 				var title = songTitle.textContent.replace(/music\/|.mp3/g,"").replace(/_/g," ");
 				songTitle.innerHTML = title;
+				song.play();
 				changeVolume();
-				song.pause();
 				startCount();
 				watch();
+				autoplay();
 			}
 			
 			function watch(){
@@ -227,7 +228,12 @@
 				}
 			}
 			
-			window.onload = playSong;
+			function startSong(){
+				playSong();
+				song.pause();
+			}
+			
+			window.onload = startSong;
 			
 			var timer;
 			var timer_is_on = 0;
