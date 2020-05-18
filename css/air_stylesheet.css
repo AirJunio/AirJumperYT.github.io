@@ -77,7 +77,7 @@ h1 {
 	text-shadow: 0 0 0.7em rgba(236, 99, 87, 0.5);
 }
 
-p #email {
+#email {
 	color: rgba(236, 99, 87, 0.8);
 	display: inline-block;
 	font-size: 0.8em;
@@ -89,7 +89,7 @@ p #email {
 	text-shadow: 0 0 0.5em;
 	transition: color 0.4s;
 }
-p #email:hover {
+#email:hover {
 	color: rgb(255, 255, 255);
 }
 
