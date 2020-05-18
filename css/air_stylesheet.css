@@ -72,27 +72,6 @@ h1 {
 	box-sizing: border-box;
 }
 
-#hinfo {
-	margin-bottom: 0.1em;
-	text-shadow: 0 0 0.7em rgba(236, 99, 87, 0.5);
-}
-
-#email {
-	color: rgba(236, 99, 87, 0.8);
-	display: inline-block;
-	font-size: 0.8em;
-	margin-top: 0;
-	padding: 0.3em;
-	border-top: double 0.1em white;
-	border-bottom: double 0.1em white;
-	border-radius: 10%;
-	text-shadow: 0 0 0.5em;
-	transition: color 0.4s;
-}
-#email:hover {
-	color: rgb(255, 255, 255);
-}
-
 #songList {
 	display: inline-block;
 }
@@ -551,6 +530,27 @@ iframe {
 	border-bottom: dashed 0.2em #fff;
 	border-bottom: dashed 0.2em #fff7;
 	border-radius: 10%;
+}
+
+#hinfo {
+	margin-bottom: 0.1em;
+	text-shadow: 0 0 0.7em rgba(236, 99, 87, 0.5);
+}
+
+#email {
+	color: rgba(236, 99, 87, 0.8);
+	display: inline-block;
+	font-size: 0.8em;
+	margin-top: 0;
+	padding: 0.3em;
+	border-top: double 0.1em white;
+	border-bottom: double 0.1em white;
+	border-radius: 10%;
+	text-shadow: 0 0 0.5em;
+	transition: color 0.4s;
+}
+#email:hover {
+	color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 1600px) {
