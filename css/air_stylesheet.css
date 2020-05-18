@@ -72,13 +72,34 @@ h1 {
 	box-sizing: border-box;
 }
 
+#hinfo {
+	margin-bottom: 0.1em;
+	text-shadow: 0 0 0.7em rgba(236, 99, 87, 0.5);
+}
+
+#email {
+	color: rgba(236, 99, 87, 0.8);
+	display: inline-block;
+	font-size: 0.8em;
+	margin-top: 0;
+	padding: 0.3em;
+	border-top: double 0.1em white;
+	border-bottom: double 0.1em white;
+	border-radius: 10%;
+	text-shadow: 0 0 0.5em;
+	transition: color 0.4s;
+}
+#email:hover {
+	color: rgb(255, 255, 255);
+}
+
 #songList {
 	display: inline-block;
 }
 
 #more {
 	background-color: transparent;
-	font-family: Bahnschrift, Arial, Arial Narrow, sans-serif;
+	font-family: Russo One, Bahnschrift, Armata, Arial, Arial Narrow, sans-serif;
 	margin: 1em auto 3em;
 	width: 15em;
 	border: none;
@@ -107,6 +128,11 @@ h1 {
 	text-decoration: none;
 	color: hsla(5,60%,60%,0.8);
 	font-weight: bold;
+	transition: color 1s;
+}
+
+#content > div a:hover {
+	color: rgb(255, 255, 255);
 }
 
 audio {
