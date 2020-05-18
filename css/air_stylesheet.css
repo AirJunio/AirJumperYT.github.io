@@ -532,12 +532,12 @@ iframe {
 	border-radius: 10%;
 }
 
-#hinfo {
+#content #hinfo {
 	margin-bottom: 0.1em;
 	text-shadow: 0 0 0.7em rgba(236, 99, 87, 0.5);
 }
 
-#email {
+#content #email {
 	color: rgba(236, 99, 87, 0.8);
 	display: inline-block;
 	font-size: 0.8em;
@@ -549,7 +549,7 @@ iframe {
 	text-shadow: 0 0 0.5em;
 	transition: color 0.4s;
 }
-#email:hover {
+#content #email:hover {
 	color: rgb(255, 255, 255);
 }
 
