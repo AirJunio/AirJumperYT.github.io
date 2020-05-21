@@ -140,6 +140,9 @@ img[alt] {
 	top: 0;
 	position: -webkit-sticky;
 	position: sticky;
+	-webkit-transform: translateZ(0);
+	display: block;
+	z-index: 1;
 }
 
 ul {
